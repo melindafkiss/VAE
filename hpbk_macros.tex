@@ -1,0 +1,193 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Math macros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Logical symbols
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\DeclareMathOperator{\satf}{\models}
+\DeclareMathOperator*{\Oplus}{\bigoplus}
+\DeclareMathOperator{\tensor}{\otimes}
+\DeclareMathOperator{\miff}{\;\Longleftrightarrow\;} 
+                                           % math `if and only if'
+\DeclareMathOperator{\mimplies}{\;\Longrightarrow\;} 
+                                           % math `implies'
+\DeclareMathOperator{\mimplied}{\;\Longleftarrow\;}  
+                                           % math `implied by'
+\DeclareMathOperator{\setMiddleSymbol}{:}
+\newcommand{\set}[2]{\{#1\;\setMiddleSymbol\;%
+ \nobreak\text{#2}\}}                      % { x | ... }
+\newcommand{\bset}[2]{\big\{#1\;\setMiddleSymbol\;%
+ \nobreak\text{#2}\big\}}                      % { x | ... }
+%\DeclareMathOperator{\id}{\textsl{id}}     % The identity map
+\newcommand{\id}{\textsl{id}}     % The identity map
+\DeclareMathOperator{\miffdef}{\stackrel{def}{\miff}}
+                                           % defining iff
+\DeclareMathOperator{\eqdef}{\stackrel{def}{=}}
+                                           % defining equation
+
+\newcommand{\labelledarrow}[1]{%
+\stackrel{#1}{\longrightarrow}}
+\DeclareMathOperator{\Mid}{\Bigg\vert}
+\DeclareMathOperator{\bmid}{\Big\vert}
+\DeclareMathOperator{\sbmid}{\big\vert}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%%  Classical math
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\DeclareMathOperator{\BZ}{\mathbb{Z}} % integers
+\DeclareMathOperator{\BQ}{\mathbb{Q}} % rationals
+\DeclareMathOperator{\BR}{\mathbb{R}} % reals
+\DeclareMathOperator{\BC}{\mathbb{C}} % complex numbers
+\DeclareMathOperator{\BG}{\mathbb{G}} % Gaussian integers
+\DeclareMathOperator{\BK}{\mathbb{K}} % Quaternions
+\DeclareMathOperator{\BA}{\mathbb{A}} % Algebraic numbers
+\DeclareMathOperator{\BF}{\mathbb{F}} % Finite fields
+%
+\DeclareMathOperator{\CC}{\mathcal{C}}
+\DeclareMathOperator{\CD}{\mathcal{D}}
+\DeclareMathOperator{\CG}{\mathcal{G}}
+\DeclareMathOperator{\CH}{\mathcal{H}}
+\DeclareMathOperator{\CK}{\mathcal{K}}
+\DeclareMathOperator{\CL}{\mathcal{L}}
+\DeclareMathOperator{\CP}{\mathcal{P}}
+\DeclareMathOperator{\CS}{\mathcal{S}}
+\DeclareMathOperator{\CX}{\mathcal{X}}
+\DeclareMathOperator{\CV}{\mathcal{V}}
+%
+\DeclareMathOperator{\Var}{\mathsf{V}}
+\DeclareMathOperator{\Ho}{\mathsf{H}}
+\DeclareMathOperator{\Su}{\mathsf{S}}
+\DeclareMathOperator{\Pd}{\mathsf{P}}
+%
+\DeclareMathOperator{\re}{\text{\rm Re}}% real part
+\DeclareMathOperator{\im}{\text{\rm Im}}% imaginary part
+\DeclareMathOperator{\Ker}{\text{\rm Ker}}
+\DeclareMathOperator{\Hom}{\text{\rm Hom}}
+\DeclareMathOperator{\Sub}{\text{\rm Sub}}
+\DeclareMathOperator{\Con}{\text{\rm Con}}
+\DeclareMathOperator{\Clo}{\text{\rm Clo}}
+\DeclareMathOperator{\Pol}{\text{\rm Pol}}
+%
+\DeclareMathOperator{\meet}{\wedge}
+\DeclareMathOperator{\join}{\vee}
+\DeclareMathOperator{\bmeet}{\bigwedge}
+\DeclareMathOperator{\bjoin}{\bigvee}
+\DeclareMathOperator{\union}{\cup}
+\DeclareMathOperator{\inter}{\cap}  % intersection
+\DeclareMathOperator{\iso}{\cong}   % isomorphic
+\DeclareMathOperator{\tg}{{\rm tg}}
+\DeclareMathOperator{\compose}{{\scriptstyle \circ}} % f o g
+\DeclareMathOperator{\nm}{\triangleleft}
+\DeclareMathOperator{\sd}{\rtimes}
+%
+\newcommand{\wec}[1]{{\mathbf{#1}}}  % notation for vectors in algebras
+%\newcommand{\wec}[1]{{\bar{#1}}} % which one do you prefer?
+\newcommand{\wrel}[1]{\;#1\;}     % a\wrel{\alpha}b = a \alpha b
+%              % this provides a flexible way to change the spacing
+%
+%\newcommand{\wrel}[1]{{\def\wrelarg{\qopname\relax{no}{#1}}\wrelarg}}
+\newcommand{\abs}[1]{\lvert #1\rvert}
+\newcommand{\card}[1]{\lvert #1\rvert}
+\newcommand{\konj}[1]{\overline{#1}}
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\asszoc}{\sim}
+\newcommand{\order}{o}
+\newcommand{\Order}{O}
+\newcommand{\wroot}[2]{\root\scriptstyle{\vphantom{2^a} #1}\of{#2}}
+\let\ts\relax
+\newcommand{\gr}{\text{\rm gr}}
+\newcommand{\GL}{\text{\rm GL}}
+\newcommand{\SL}{\text{\rm SL}}
+\newcommand{\PSL}{\text{\rm PSL}}
+\newcommand{\PGL}{\text{\rm PGL}}
+\newcommand{\Aff}{\text{\rm AGL}}
+\newcommand{\Uni}{\text{\rm UT}}
+\newcommand{\Tri}{\text{\rm T}}
+\newcommand{\E}{\text{\rm E}}
+\newcommand{\Ortog}{\text{\rm O}}
+\newcommand{\SO}{\text{\rm SO}}
+\newcommand{\Sph}{\text{\rm S}}
+%\newcommand{\U}{\text{\rm U}}
+\newcommand{\SU}{\text{\rm SU}}
+%\newcommand{\GF}{\text{\rm GF}} % old-fashioned?
+\newcommand{\GF}[1]{\BF_{{#1}}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%%  \m is used to produce models (algebras) as follows:
+%%%  typing `\m a'  produces in bold face, A.
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\m}[1]{{\mathbf{\uppercase{#1}}}}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  Abbreviations
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newcommand{\lb}{\langle} % <...>
+\newcommand{\rb}{\rangle}
+\newcommand\gen[1]{\lb#1\rb}
+\newcommand\scalar[2]{\lb #1,#2\rb}
+\DeclareMathOperator{\genMiddleSymbol}{\mid}
+\newcommand{\Gen}[2]{\gen{\,#1\;\genMiddleSymbol\;%
+ \nobreak\text{#2}}}                      % < x | ... >
+%
+\newcommand{\ul}{\underline}
+\newcommand{\ol}{\overline}
+%
+\newcommand{\vep}{\varepsilon}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand\texth[1]{\text{\hun {#1}}}
+\newcommand\Aut{{\text{{\rm Aut}}}}
+\newcommand\Inn{{\text{{\rm Inn}}}}
+\newcommand\tr{\text{\rm tr}}
+\newcommand\sg{\text{\rm sg}}
+\newcommand\ann{\text{\rm ann}}
+\newcommand\Chi{\mathbf{X}}
+\newcommand\wector[1]{\overrightarrow{#1}}
+\newcommand\hph{\hphantom{-}}
+\newdimen\wstrutht
+\wstrutht=\ht\strutbox\advance\wstrutht\dp\strutbox
+\newcommand\wstrut{\vrule width 0pt height\wstrutht
+  depth\dp\strutbox}
+\newcommand\hphm{\hphantom{-}}
+%\newcommand\wstrut{\vphantom{$2^{A^A}$}}
+
+%Cells in a Horner scheme
+\newbox\Hcellbox
+\setbox\Hcellbox\hbox{$-4$}
+\newdimen\Hcellwidth
+\Hcellwidth=\wd\Hcellbox
+\newcommand\Hc[1]{\hbox to\Hcellwidth{\hfill{$#1$}\hfill}}
+
+\definecolor{wfgreen}{rgb}{.132,.545,.132}
+\definecolor{wfyellow}{rgb}{.8,.8,.0}
+\def\wmathred#1{\only<presentation>{{\setbeamercolor{math text}{fg=red}{{#1}}}}\only<article>{#1}}
+\def\wcyan#1{\only<presentation>{{\color{cyan}{{#1}}}}\only<article>{{#1}}}
+\def\wyellow#1{\only<presentation>{{\color{wfyellow}{{#1}}}}\only<article>{{#1}}}
+\def\wmathyellow#1{\only<presentation>{{\setbeamercolor{math text}{fg=yellow}{{#1}}}}\only<article>{#1}}
+\def\wred#1{\only<presentation>{{\color{red}{{#1}}}}\only<article>{{\underline{#1}}}}
+\def\wblack#1{\only<presentation>{{\color{black}{{#1}}}}\only<article>{{\underline{#1}}}}
+\def\wblue#1{\only<presentation>{{\color{blue}{{#1}}}}\only<article>{{\underline{#1}}}}
+\def\itemn#1{\only<presentation>{{\color{blue}{{#1}}}}\only<article>{{#1}}}
+\only<presentation>{\setbeamercolor{math text}{fg=wfgreen}}
+
+
+\endinput
+
