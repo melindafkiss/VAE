@@ -1,0 +1,254 @@
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%   ENVIRONMENTS
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+\newtheoremstyle{hunplain}%
+  {\medskipamount}%         Space above
+  {\medskipamount}%         Space below
+  {\slshape}% Body font
+  {}%         Indent amount (empty = no indent)
+  {\bfseries}%Thm head font
+  {.}%        Punctuation after thm head
+  { }%        Space after thm head
+  {\thmnumber{#2.\;}\thmname{#1}\thmnote{\normalfont\ [#3]}}
+%
+\newtheoremstyle{hundefinition}%
+  {}%         Space above
+  {}%         Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent)
+  {\bfseries}% Thm head font
+  {.}%        Punctuation after thm head
+  { }%        Space after thm head
+  {\thmnumber{#2.\;}\thmname{#1}\thmnote{\normalfont\ [#3]}}
+%
+\newtheoremstyle{hunremark}%
+  {}%         Space above
+  {}%         Space below
+  {}%         Body font
+  {}%         Indent amount (empty = no indent)
+  {\slshape}% Thm head font
+  {.}%        Punctuation after thm head
+  { }%        Space after thm head
+  {\thmnumber{#2.\;}\thmname{#1}\thmnote{normalfont\ [#3]}}
+%
+\newtheoremstyle{hungyak}%
+  {}%         Space above
+  {}%         Space below
+  {\normalfont}%         Body font
+  {}%         Indent amount (empty = no indent)
+  {\bfseries}% Thm head font
+  {}%        Punctuation after thm head
+  { }%        Space after thm head
+  {\thmnumber{#2.\;}\thmnote{\bfseries\slshape (#3)}}
+%
+\theoremstyle{hunplain}
+\newtheorem{thm}{Tétel}[section]
+\newtheorem{cor}[thm]{Következmény}
+\newtheorem{lm}[thm]{Lemma}
+\newtheorem{prp}[thm]{Propozíció}
+\newtheorem{clm}[thm]{Állítás}
+\newtheorem{qu}[thm]{Kérdés}
+\newtheorem{prb}[thm]{Probléma}
+\newtheorem{fa}[thm]{Feladat}
+%
+\theoremstyle{hundefinition}
+\newtheorem{df}[thm]{Definíció}
+\newtheorem{exmp}[thm]{Példa}
+\newtheorem{exc}[thm]{Gyakorlat}
+%
+\theoremstyle{hunremark}
+\newtheorem{rem}[thm]{Megjegyzés}
+%
+\theoremstyle{hungyak}
+\newtheorem{gyak}{} % no text
+%
+\numberwithin{equation}{section}
+%
+\newcommand{\texth}[1]{\text{\hun {#1}}}
+\renewcommand{\proofname}{Bizonyítás}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Letters
+%
+\DeclareMathOperator{\BZ}{\mathbb{Z}} % integers
+\DeclareMathOperator{\BQ}{\mathbb{Q}} % rationals
+\DeclareMathOperator{\BR}{\mathbb{R}} % reals
+\DeclareMathOperator{\BC}{\mathbb{C}} % complex numbers
+\DeclareMathOperator{\BG}{\mathbb{G}} % Gaussian integers
+\DeclareMathOperator{\BK}{\mathbb{K}} % Quaternions
+\DeclareMathOperator{\BA}{\mathbb{A}} % Algebraic numbers
+\DeclareMathOperator{\BF}{\mathbb{F}} % Finite fields
+%
+\newcommand{\Chi}{\mathbf{X}}
+\newcommand{\vep}{\varepsilon}
+%
+% Classical
+%
+\DeclareMathOperator{\re}{\text{\rm Re}}
+\DeclareMathOperator{\im}{\text{\rm Im}}
+\DeclareMathOperator{\gr}{\text{\rm gr}}
+\DeclareMathOperator{\tr}{\text{\rm tr}}
+\DeclareMathOperator{\sg}{\text{\rm sg}} % signum, sign
+\DeclareMathOperator{\tg}{{\rm tg}} % tangent
+\DeclareMathOperator{\id}{\textsl{id}}     % The identity map
+\DeclareMathOperator{\comp}{{\scriptstyle \circ}} % f o g
+%
+\DeclareMathOperator{\asszoc}{\sim} % associate (of a number)
+\DeclareMathOperator{\ind}{\text{\rm ind}} % index
+\DeclareMathOperator{\Ordo}{\mathit{O}}
+%
+\newcommand{\konj}[1]{\overline{#1}} % conjugate
+\newcommand{\abs}[1]{\lvert #1\rvert} % absolute value
+\newcommand{\card}[1]{\lvert #1\rvert} % cardinality
+\newcommand{\norm}[1]{\lVert #1\rVert}
+\newcommand{\scalar}[2]{\langle #1,#2\rangle} % scalar product
+\newcommand{\wroot}[2]{\root\scriptstyle{#1}\of{#2}} % nicer looking root
+%
+% Set definition, logic
+%
+\newcommand{\sset}[1]{\{{#1}\}} % {...}
+\DeclareMathOperator{\setMiddleSymbol}{:}
+\newcommand{\set}[2]{\{#1\;\setMiddleSymbol\;%
+ \nobreak\text{#2}\}}                      % { x | ... }
+\newcommand{\bset}[2]{\big\{#1\;\setMiddleSymbol\;%
+ \nobreak\text{#2}\big\}}                      % { x | ... }
+\newcommand{\gen}[1]{\langle{#1}\rangle} % <...>
+\DeclareMathOperator{\genMiddleSymbol}{\mid}
+\newcommand{\Gen}[2]{\gen{\,#1\;\genMiddleSymbol\;%
+ \nobreak\text{#2}}}                      % < x | ... >
+%
+\DeclareMathOperator{\union}{\cup}
+\DeclareMathOperator{\inter}{\cap}  % intersection
+\DeclareMathOperator{\meet}{\wedge}
+\DeclareMathOperator{\join}{\vee}
+\DeclareMathOperator{\bmeet}{\bigwedge}
+\DeclareMathOperator{\bjoin}{\bigvee}
+\DeclareMathOperator{\miff}{\Longleftrightarrow} 
+                                           % math `if and only if'
+\DeclareMathOperator{\mimplies}{\Longrightarrow} 
+                                           % math `implies'
+\DeclareMathOperator{\mimplied}{\Longleftarrow}  
+                                           % math `implied by'
+\DeclareMathOperator{\eqdef}{\stackrel{def}{=}}
+                                           % defining equation
+%
+% Groups, rings
+%
+\newcommand{\GL}{\text{\rm GL}}
+\newcommand{\SL}{\text{\rm SL}}
+\newcommand{\PSL}{\text{\rm PSL}}
+\newcommand{\PGL}{\text{\rm PGL}}
+\newcommand{\Aff}{\text{\rm AGL}}
+\newcommand{\Uni}{\text{\rm UT}}
+\newcommand{\Tri}{\text{\rm T}}
+\newcommand{\E}{\text{\rm E}}
+\newcommand{\Ortog}{\text{\rm O}}
+\newcommand{\SO}{\text{\rm SO}}
+\newcommand{\Sph}{\text{\rm S}}
+\newcommand{\U}{\text{\rm U}}
+\newcommand{\SU}{\text{\rm SU}}
+%
+\DeclareMathOperator{\iso}{\cong}   % isomorphic
+\DeclareMathOperator{\Ker}{\text{\rm Ker}} 
+\DeclareMathOperator{\Hom}{\text{\rm Hom}}
+\DeclareMathOperator{\Aut}{\text{\rm Aut}}
+\DeclareMathOperator{\Inn}{\text{\rm Inn}}
+\DeclareMathOperator{\Gal}{\text{\rm Gal}} % Galois group
+\newcommand{\order}{o}
+\DeclareMathOperator{\nm}{\triangleleft} % normal subgroup
+\DeclareMathOperator{\sd}{\rtimes} % semidirect product
+\DeclareMathOperator{\tensor}{\otimes}
+\newcommand\ann{\text{\rm ann}}
+\DeclareMathOperator*{\Oplus}{\bigoplus}
+%
+\long\def\ropzhtemplate#1#2#3{%
+%#1 = kurzusnév
+%#2 = sorszám, pl. II/7
+%#3 = a feladat szövege
+\newbox\tmpbox
+\setbox\tmpbox\vbox to 0 pt{%
+
+\centerline{\bf #1}
+
+\centerline{\it #2.~röpdolgozat}
+
+\bigskip
+
+\noindent
+\textbf{OLVASHATÓ név:}
+
+\medskip
+
+\noindent
+\textbf{Neptun-kód:}
+
+\medskip
+
+\begin{gyak}
+#3
+\end{gyak}
+
+\vskip 0pt plus 1 fil minus 1fil
+
+}
+
+\vbox to \textheight{
+
+\copy\tmpbox
+
+\vfill
+\hrule
+\vfill
+
+\noindent
+\begin{turn}{180}
+    \box\tmpbox
+\end{turn}
+}}
+%
+\hyphenation{össze-adást négy-zet-össze-gét null-osz-tó
+  null-osz-tó-men-tes null-osz-tó-men-tes-sé-get
+  egy-ség-ele-mes nor-mál-osz-tók nor-mál-alak-ra
+  nor-mál-alak-ját ge-ne-rá-tor-elem-nek bal-ide-ál
+  bal-ide-ált bal-ide-ál-já-nak össze-adan-dó
+  de-ter-mi-náns-osz-tó nem-tri-vi-á-lis meg-egyez-nek
+  meg-egye-zik négy-zet-össze-ge-ként négy-zet-összeg
+  össze-adás össze-adás-ból egy-ség-ele-mé-től bal-in-ver-ze
+  gyű-rű-ele-mek egy-ség-elem fő-együtt-ha-tót
+  kong-ru-en-cia-rend-szer-nek per-mu-tá-ció-cso-port
+  nor-mál-osz-tó-nak per-mu-tá-ció-cso-por-tot
+  cso-port-el-mé-le-tet mel-lék-osz-tá-lyok nor-mál-osz-tót
+  nor-mál-osz-tó-it nor-mál-osz-tó-já-nak egy-ele-mű
+  komp-lexus-szor-zás mind-erre cso-port-el-mé-let-ben
+  cso-port-el-mé-le-ti mel-lék-osz-tály-ból nor-mál-osz-tó
+  nor-mál-osz-tó-ra húsz-ele-mű maxi-má-lis
+  rep-re-zen-táns-ele-mek egy-ség-elem-be in-dexük Suzuki
+  Feit Thompson mel-lék-osz-tály prím-in-dexű
+  rep-re-zen-táns-ele-met null-ele-me null-osz-tók fixen
+  ge-ne-rá-tor-ele-me test-izo-mor-fiz-mus prím-ide-ál
+  hal-maz-el-mé-le-ti tu-do-mány-ág két-ele-mű nor-mál-alak
+  nor-mál-alak-ról fak-tor-al-geb-rái-val
+  ge-ne-rá-tor-ele-mé-hez par-tí-ció-há-ló-já-nak
+  po-li-nom-osz-tás-sal tit-kos-írást
+  vissza-transz-po-nál-ják rész-struk-tú-ra
+  rész-struk-tú-rá-it rész-al-geb-rá-ja
+  nor-mál-osz-tó-há-ló-ja nyolc-ele-mű Morgan
+  kva-ter-nió-test-ben négy-zet-elem át-in-dexel-ve köb-elem
+  négy-ele-mű bal-ide-ál-ban fő-ide-ál-gyű-rűk
+  négy-zet-össze-gek négy-zet-összeg négy-zet-össze-ge
+  maxi-mu-ma sze-mi-di-rekt cso-port-al-geb-ra
+  kon-ju-gált-osz-tály kon-ju-gált-osz-tá-lyok jobb-ide-ál
+  bal-ide-ál bal-ide-ál-jai-ra maxi-ma-li-tá-sa
+  de-fi-ní-ció-já-ból McKenzie sa-ját-altér
+  kom-po-zí-ció-fak-to-ra-it kub-ok-ta-éder nor-mál-lán-ca
+  test-át-ló Wiles null-ele-mből null-elem bal-ide-ál-ja
+  osz-lo-pai-ban klón-el-mé-let mát-rixot mát-rixai
+  mát-rixok-ra mát-rixok fény-év fény-éves sa-ját-al-te-re
+  Eins-tein Eins-teint}
